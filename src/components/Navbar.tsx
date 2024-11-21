@@ -20,7 +20,9 @@ const Navbar = () => {
             <li>My Tours</li>
           </Link>
         </ul>
-        <Button>Explore Now</Button>
+        <Link className='link' to={"/explore-tours"}>
+          <Button>Explore Now</Button>
+        </Link>
       </nav>
       <Outlet />
     </>

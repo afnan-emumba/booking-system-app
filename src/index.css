@@ -5,6 +5,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #202445;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .nav {
@@ -16,6 +44,7 @@
     position: sticky;
     width: 100%;
     z-index: 999;
+    flex-shrink: 0;
 }
 
 .nav-list {
@@ -33,4 +62,19 @@
 .link {
     all: unset;
     cursor: pointer;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    flex-grow: 1;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
