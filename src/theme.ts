@@ -10,7 +10,7 @@ const theme = createTheme({
           "&:hover": {
             backgroundColor: "#c74f38",
           },
-          padding: "10px 16px",
+          padding: "8px 16px",
           fontWeight: 600,
           textTransform: "none",
           fontSize: 14,

@@ -8,6 +8,11 @@
     color: #202445;
 }
 
+::selection {
+    background-color: #da5c42;
+    color: #ffffff;
+}
+
 html,
 body {
     height: 100%;
@@ -29,13 +34,13 @@ p {
     min-height: 100%;
 }
 
-.app {
+.app-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,32 +52,34 @@ p {
     flex-shrink: 0;
 }
 
-.nav-list {
+.navbar-list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
 }
 
-.nav-list li {
+.navbar-list li {
     list-style: none;
     font-weight: 500;
 }
 
-.link {
+.navbar-link {
     all: unset;
     cursor: pointer;
 }
 
-.home {
+.homepage {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
     flex-grow: 1;
+    min-height: 100%;
+    background-color: beige;
 }
 
-.home-text {
+.homepage-text {
     display: flex;
     flex-direction: column;
     justify-content: center;

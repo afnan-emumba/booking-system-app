@@ -5,22 +5,22 @@ import Logo from "../assets/Logo";
 const Navbar = () => {
   return (
     <>
-      <nav className='nav'>
+      <nav className='navbar'>
         <Link to={"/"}>
           <Logo />
         </Link>
-        <ul className='nav-list'>
-          <Link className='link' to={"/add-tour"}>
+        <ul className='navbar-list'>
+          <Link className='navbar-link' to={"/add-tour"}>
             <li>Add Tour</li>
           </Link>
-          <Link className='link' to={"/book-tour"}>
+          <Link className='navbar-link' to={"/book-tour"}>
             <li>Book Tour</li>
           </Link>
-          <Link className='link' to={"/my-tours"}>
+          <Link className='navbar-link' to={"/my-tours"}>
             <li>My Tours</li>
           </Link>
         </ul>
-        <Link className='link' to={"/explore-tours"}>
+        <Link className='navbar-link' to={"/explore-tours"}>
           <Button>Explore Now</Button>
         </Link>
       </nav>

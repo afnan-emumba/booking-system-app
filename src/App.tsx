@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className='app'>
+    <div className='app-container'>
       <Routes>
         <Route path='/' element={<Navbar />}>
           <Route path='/' element={<Home />} />
