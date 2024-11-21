@@ -1,11 +1,29 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import { Button } from "@mui/material";
+import Logo from "../assets/Logo";
 
 const Navbar = () => {
   return (
-    <nav>
-      <h1>Navbar here</h1>
+    <>
+      <nav className='nav'>
+        <Link to={"/"}>
+          <Logo />
+        </Link>
+        <ul className='nav-list'>
+          <Link className='link' to={"/add-tour"}>
+            <li>Add Tour</li>
+          </Link>
+          <Link className='link' to={"/book-tour"}>
+            <li>Book Tour</li>
+          </Link>
+          <Link className='link' to={"/my-tours"}>
+            <li>My Tours</li>
+          </Link>
+        </ul>
+        <Button>Explore Now</Button>
+      </nav>
       <Outlet />
-    </nav>
+    </>
   );
 };
 
