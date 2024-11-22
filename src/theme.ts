@@ -19,6 +19,15 @@ const theme = createTheme({
         disableElevation: true,
       },
     },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          padding: "16px",
+          borderRadius: 10,
+        },
+      },
+    },
   },
 
   palette: {

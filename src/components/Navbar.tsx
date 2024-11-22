@@ -37,11 +37,7 @@ const Navbar = () => {
             <li>My Tours</li>
           </Link>
         </ul>
-        <Link
-          className='navbar-link'
-          to={"/explore-tours"}
-          onClick={toggleMenu}
-        >
+        <Link className='navbar-link' to={"/explore-tours"}>
           <Button variant='contained'>Explore Now</Button>
         </Link>
       </nav>
