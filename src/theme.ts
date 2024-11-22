@@ -5,8 +5,6 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: "#F16B51",
-          color: "#fff",
           "&:hover": {
             backgroundColor: "#c74f38",
           },
@@ -15,6 +13,10 @@ const theme = createTheme({
           textTransform: "none",
           fontSize: 14,
         },
+      },
+      defaultProps: {
+        disableRipple: true,
+        disableElevation: true,
       },
     },
   },
