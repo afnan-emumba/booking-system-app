@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import HomeImage1 from "../assets/Images/home-pic-1.jpg";
-import HomeImage2 from "../assets/Images/home-pic-2.jpg";
-import HomeImage3 from "../assets/Images/home-pic-3.jpg";
+import HomeImage1 from "../assets/images/home-pic-1.jpg";
+import HomeImage2 from "../assets/images/home-pic-2.jpg";
+import HomeImage3 from "../assets/images/home-pic-3.jpg";
 
 const Home = () => {
   return (
