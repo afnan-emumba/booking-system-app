@@ -24,7 +24,7 @@ const Home = () => {
         </div>
       </div>
       <div className='homepage-images'>
-        <div className='homepage-background' />
+        <div className='background' />
         <div className='image-grid'>
           <img src={HomeImage1} alt='Destination 1' />
           <img src={HomeImage2} alt='Destination 2' />
