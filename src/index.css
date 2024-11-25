@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overscroll-behavior: none;
 }
 
 ::selection {
@@ -186,7 +187,9 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 15%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .explore-search {
@@ -199,7 +202,6 @@ p {
     padding: 1rem;
     flex-wrap: wrap;
     flex-direction: row;
-    /* Ensure horizontal layout on desktop */
 }
 
 .explore-heading {
@@ -263,8 +265,7 @@ p {
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 800px;
+    width: 80%;
     margin-bottom: 2rem;
 }
 
@@ -308,8 +309,24 @@ p {
     height: 60%;
     background-size: cover;
     background-position: center;
-    /* border-top-left-radius: 10px;
-    border-top-right-radius: 10px; */
+}
+
+.tour-description-short {
+    display: -webkit-box;
+    /* Establish a flex container for the lines */
+    -webkit-box-orient: vertical;
+    /* Specify vertical orientation */
+    overflow: hidden;
+    /* Hide any overflowing text */
+    text-overflow: ellipsis;
+    /* Add the ellipsis for overflow */
+    -webkit-line-clamp: 2;
+    /* Limit to 2 lines */
+    line-clamp: 2;
+    /* Standard syntax (browser support may vary) */
+    max-height: 3em;
+    /* Ensure it matches 2 lines of text */
+    line-height: 1.5em;
 }
 
 .tour-card-details {
@@ -391,6 +408,10 @@ p {
     .explore-search {
         margin-top: 200px;
     }
+
+    .tour-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -446,6 +467,19 @@ p {
 
     .search-btn {
         height: auto;
+    }
+
+    .search-tags {
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .tour-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-card {
+        margin-bottom: 1rem;
     }
 }
 
@@ -506,13 +540,14 @@ p {
         max-width: 100%;
     }
 
-    .explore-search>.MuiDivider-root {
-        display: none;
-        /* Remove Divider */
-    }
 
     .explore-search button {
         width: 100%;
         /* Ensure button takes full width on mobile */
+    }
+
+    .tour-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }

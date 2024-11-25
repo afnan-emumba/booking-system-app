@@ -13,48 +13,49 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+
 import SearchChip from "./SearchChip";
+
+const priceRanges = [
+  {
+    value: "50-200",
+    label: "$50 - $200",
+  },
+  {
+    value: "200-500",
+    label: "$200 - $500",
+  },
+  {
+    value: "500-1000",
+    label: "$500 - $1000",
+  },
+  {
+    value: "1000",
+    label: "$1000 & Above",
+  },
+];
+
+const searchLocations = [
+  "Istanbul",
+  "Dubai",
+  "Paris",
+  "London",
+  "New York",
+  "Tokyo",
+  "Sydney",
+  "Cape Town",
+  "Rio de Janeiro",
+  "Bali",
+  "Machu Picchu",
+  "Santorini",
+  "Barcelona",
+  "Rome",
+  "Venice",
+  "Prague",
+];
 
 const Explore = () => {
   const [priceRange, setPriceRange] = useState<string>("0-100");
-
-  const priceRanges = [
-    {
-      value: "50-200",
-      label: "$50 - $200",
-    },
-    {
-      value: "200-500",
-      label: "$200 - $500",
-    },
-    {
-      value: "500-1000",
-      label: "$500 - $1000",
-    },
-    {
-      value: "1000",
-      label: "$1000 & Above",
-    },
-  ];
-
-  const searchLocations = [
-    "Istanbul",
-    "Dubai",
-    "Paris",
-    "London",
-    "New York",
-    "Tokyo",
-    "Sydney",
-    "Cape Town",
-    "Rio de Janeiro",
-    "Bali",
-    "Machu Picchu",
-    "Santorini",
-    "Barcelona",
-    "Rome",
-    "Venice",
-    "Prague",
-  ];
 
   const handleChange = (event: SelectChangeEvent) => {
     setPriceRange(event.target.value);
