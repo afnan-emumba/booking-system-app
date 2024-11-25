@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Paper, Button } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import SearchIcon from "@mui/icons-material/Search";
@@ -17,6 +17,18 @@ import SearchChip from "./SearchChip";
 
 const Explore = () => {
   const [priceRange, setPriceRange] = useState<string>("0-100");
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const priceRanges = [
     {
@@ -54,10 +66,6 @@ const Explore = () => {
     "Rome",
     "Venice",
     "Prague",
-    "Amsterdam",
-    "Vienna",
-    "Budapest",
-    "Moscow",
   ];
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -68,11 +76,11 @@ const Explore = () => {
     <>
       <div className='explore-image'></div>
       <div className='explore-page'>
-        <div className='explore-search-container'>
+        <div className={`explore-search-container ${isMobile ? "mobile" : ""}`}>
           <Paper
             className='explore-search'
             elevation={4}
-            sx={{ height: "150px" }}
+            sx={{ height: isMobile ? "auto" : "150px" }}
           >
             <div className='explore-input-container'>
               <div className='explore-heading'>
@@ -87,11 +95,15 @@ const Explore = () => {
                   label='Where to?'
                   variant='outlined'
                   className='explore-input-field'
+                  fullWidth
                 />
               </div>
             </div>
 
-            <Divider orientation='vertical' flexItem />
+            <Divider
+              orientation={isMobile ? "horizontal" : "vertical"}
+              flexItem
+            />
 
             <div className='explore-input-container'>
               <div className='explore-heading'>
@@ -107,7 +119,10 @@ const Explore = () => {
               </div>
             </div>
 
-            <Divider orientation='vertical' flexItem />
+            <Divider
+              orientation={isMobile ? "horizontal" : "vertical"}
+              flexItem
+            />
 
             <div className='explore-input-container'>
               <div className='explore-heading'>
@@ -136,11 +151,14 @@ const Explore = () => {
               </div>
             </div>
 
-            <Button variant='contained'>
-              <SearchIcon
-                fontSize='medium'
-                style={{ color: "#fff", height: "80px" }}
-              />
+            <Button
+              variant='contained'
+              sx={{
+                height: isMobile ? "auto" : "80px",
+                width: isMobile ? "100%" : "auto",
+              }}
+            >
+              <SearchIcon fontSize='medium' style={{ color: "#fff" }} />
             </Button>
           </Paper>
         </div>
