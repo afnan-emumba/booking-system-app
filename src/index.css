@@ -189,10 +189,6 @@ p {
     margin-top: 20%;
 }
 
-.explore-search-container.mobile {
-    flex-direction: column;
-}
-
 .explore-search {
     display: flex;
     justify-content: space-evenly;
@@ -202,6 +198,8 @@ p {
     max-width: 1200px;
     padding: 1rem;
     flex-wrap: wrap;
+    flex-direction: row;
+    /* Ensure horizontal layout on desktop */
 }
 
 .explore-heading {
@@ -244,6 +242,10 @@ p {
     justify-content: center;
     align-items: center;
     margin-top: -2px;
+}
+
+.search-btn {
+    height: 100%;
 }
 
 .search-tags-container {
@@ -382,6 +384,10 @@ p {
     .explore-search {
         margin-top: 150px;
     }
+
+    .search-btn {
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -433,6 +439,7 @@ p {
 
     .explore-search {
         flex-direction: column;
+        /* Ensure input fields stack vertically */
         margin-top: 100px;
     }
 
@@ -440,7 +447,13 @@ p {
         max-width: 100%;
     }
 
-    .explore-search > .MuiDivider-root {
+    .explore-search>.MuiDivider-root {
         display: none;
+        /* Remove Divider */
+    }
+
+    .explore-search button {
+        width: 100%;
+        /* Ensure button takes full width on mobile */
     }
 }

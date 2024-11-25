@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Paper, Button } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import SearchIcon from "@mui/icons-material/Search";
@@ -17,18 +17,6 @@ import SearchChip from "./SearchChip";
 
 const Explore = () => {
   const [priceRange, setPriceRange] = useState<string>("0-100");
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const priceRanges = [
     {
@@ -76,11 +64,11 @@ const Explore = () => {
     <>
       <div className='explore-image'></div>
       <div className='explore-page'>
-        <div className={`explore-search-container ${isMobile ? "mobile" : ""}`}>
+        <div className='explore-search-container'>
           <Paper
             className='explore-search'
             elevation={4}
-            sx={{ height: isMobile ? "auto" : "150px" }}
+            sx={{ height: "auto" }}
           >
             <div className='explore-input-container'>
               <div className='explore-heading'>
@@ -90,20 +78,19 @@ const Explore = () => {
                 <h3>Location</h3>
               </div>
               <div className='explore-input'>
-                <TextField
-                  id='outlined-basic'
-                  label='Where to?'
-                  variant='outlined'
-                  className='explore-input-field'
-                  fullWidth
-                />
+                <FormControl fullWidth>
+                  <TextField
+                    id='outlined-basic'
+                    label='Where to?'
+                    variant='outlined'
+                    className='explore-input-field'
+                    fullWidth
+                  />
+                </FormControl>
               </div>
             </div>
 
-            <Divider
-              orientation={isMobile ? "horizontal" : "vertical"}
-              flexItem
-            />
+            <Divider orientation='vertical' flexItem sx={{ display: "none" }} />
 
             <div className='explore-input-container'>
               <div className='explore-heading'>
@@ -113,16 +100,15 @@ const Explore = () => {
                 <h3>Choose Date</h3>
               </div>
               <div className='explore-input'>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker label='Choose Date' />
-                </LocalizationProvider>
+                <FormControl fullWidth>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker label='Choose Date' />
+                  </LocalizationProvider>
+                </FormControl>
               </div>
             </div>
 
-            <Divider
-              orientation={isMobile ? "horizontal" : "vertical"}
-              flexItem
-            />
+            <Divider orientation='vertical' flexItem sx={{ display: "none" }} />
 
             <div className='explore-input-container'>
               <div className='explore-heading'>
@@ -151,13 +137,7 @@ const Explore = () => {
               </div>
             </div>
 
-            <Button
-              variant='contained'
-              sx={{
-                height: isMobile ? "auto" : "80px",
-                width: isMobile ? "100%" : "auto",
-              }}
-            >
+            <Button variant='contained' className='search-btn'>
               <SearchIcon fontSize='medium' style={{ color: "#fff" }} />
             </Button>
           </Paper>
