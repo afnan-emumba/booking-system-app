@@ -30,7 +30,7 @@ const Navbar = () => {
           <Link className='navbar-link' to={"/add-tour"} onClick={toggleMenu}>
             <li>Add Tour</li>
           </Link>
-          <Link className='navbar-link' to={"/book-tour"} onClick={toggleMenu}>
+          <Link className='navbar-link' to={"/tours"} onClick={toggleMenu}>
             <li>Book Tour</li>
           </Link>
           <Link className='navbar-link' to={"/my-tours"} onClick={toggleMenu}>
