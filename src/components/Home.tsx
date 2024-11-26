@@ -16,11 +16,9 @@ const Home = () => {
           and make your tour a stupendous memory.
         </p>
         <div>
-          <Button variant='contained'>
-            <Link className='navbar-link' to={"/explore-tours"}>
-              Explore Now
-            </Link>
-          </Button>
+          <Link className='navbar-link' to={"/explore-tours"}>
+            <Button variant='contained'>Explore Now</Button>
+          </Link>
         </div>
       </div>
       <div className='homepage-images'>

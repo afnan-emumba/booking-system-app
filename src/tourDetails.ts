@@ -4,6 +4,8 @@ import TourPic3 from "./assets/images/tour-card-3.jpg";
 import TourPic4 from "./assets/images/tour-card-4.jpg";
 import TourPic5 from "./assets/images/tour-card-5.jpg";
 import TourPic6 from "./assets/images/tour-card-6.jpg";
+// import TourPic7 from "./assets/images/tour-card-7.jpg";
+// import TourPic8 from "./assets/images/tour-card-8.jpg";
 
 const tourDetails = [
   {
@@ -11,54 +13,287 @@ const tourDetails = [
     name: "Pérez Art Museum Miami",
     description:
       "The Pérez Art Museum Miami — officially known as the Jorge M. Pérez Art Museum of Miami-Dade County—is a contemporary art museum that relocated in 2013 to the Museum Park in Downtown Miami, Florida. Founded in 1984 as the Center for the Fine Arts, it became known as the Miami Art Museum from 1996 until it was renamed in 2013 upon the opening its new building designed by Herzog & de Meuron at 1103 Biscayne Boulevard.",
-    priceRange: [50, 200],
+    city: "Miami",
+    priceRange: "50 - 200",
     numOfDays: 3,
-    image: TourPic1,
+    coverImage: TourPic1,
+    images: [TourPic1, TourPic1, TourPic1, TourPic1, TourPic1],
+    included: {
+      deptLocation: "2000 Brush St, Detroit, MI 48226, United States",
+      return: "7:00 PM",
+      features: [
+        "Basic first aid kit",
+        "Fuel Expense",
+        "Detail Guided Maps",
+        "Comfortable Private Booked Transport",
+        "Mess Tent, Kitchen Utensils, and Cook",
+        "Waterproof Tents on twin/triple Sharing",
+      ],
+    },
+    itinerary: [
+      [
+        "Tours with American Sign Language",
+        "Audio description group tours",
+        "Large-print gallery notes",
+        "Lunch Included",
+      ],
+      [
+        "Tours with American Sign Language",
+        "Audio description group tours",
+        "Large-print gallery notes",
+        "Lunch Included",
+      ],
+      [
+        "Tours with American Sign Language",
+        "Audio description group tours",
+        "Large-print gallery notes",
+        "Lunch Included",
+      ],
+    ],
   },
   {
     id: 2,
-    name: "Hard Rock Stadium",
+    name: "Eiffel Tower",
     description:
-      "Hard Rock Stadium is a multipurpose stadium located in Miami Gardens, Florida. It is the home stadium of the Miami Dolphins of the National Football League (NFL). The stadium also hosts the Miami Hurricanes football team and has been the site of numerous concerts, soccer matches, and other events. Originally opened in 1987 as Joe Robbie Stadium, it has undergone several name changes and renovations over the years. The stadium features a unique open-air canopy that provides shade and protection from the elements for most of the seating areas.",
-    priceRange: [50, 80],
-    numOfDays: 1,
-    image: TourPic2,
+      "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887 to 1889 as the entrance to the 1889 World's Fair, it was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognizable structures in the world.",
+    city: "Paris",
+    priceRange: "200 - 500",
+    numOfDays: 2,
+    coverImage: TourPic2,
+    images: [TourPic2, TourPic2, TourPic2, TourPic2, TourPic2],
+    included: {
+      deptLocation:
+        "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
+      return: "6:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the summit",
+        "Souvenir photos",
+        "Lunch at the Eiffel Tower restaurant",
+      ],
+    },
+    itinerary: [
+      [
+        "Guided tour of the Eiffel Tower",
+        "Access to the summit",
+        "Lunch at the Eiffel Tower restaurant",
+      ],
+      [
+        "Guided tour of the Eiffel Tower",
+        "Access to the summit",
+        "Lunch at the Eiffel Tower restaurant",
+      ],
+      [
+        "Guided tour of the Eiffel Tower",
+        "Access to the summit",
+        "Lunch at the Eiffel Tower restaurant",
+      ],
+    ],
   },
   {
     id: 3,
-    name: "Matheson Hammock Park",
+    name: "Hagia Sophia",
     description:
-      "Matheson Hammock Park is a large urban park in metropolitan Miami, just south of Coral Gables, Florida. The park surrounds the north and western ends of Fairchild Tropical Botanic Garden. It features a man-made atoll pool, which is flushed naturally with the tidal action of nearby Biscayne Bay. The park also offers a marina, picnic pavilions, nature trails, and a restaurant built into a historic coral rock building. Matheson Hammock Park is a popular spot for families, nature enthusiasts, and those looking to enjoy a relaxing day by the water.",
-    priceRange: [50, 200],
+      "Hagia Sophia, officially the Hagia Sophia Grand Mosque, is a Late Antique place of worship in Istanbul. Built in 537 as the patriarchal cathedral of the imperial capital of Constantinople, it was the largest Christian church of the eastern Roman Empire (the Byzantine Empire) and the Eastern Orthodox Church, except during the Latin Empire from 1204 to 1261, when it became the city's Latin Catholic cathedral.",
+    city: "Istanbul",
+    priceRange: "50 - 200",
     numOfDays: 3,
-    image: TourPic3,
+    coverImage: TourPic3,
+    images: [TourPic3, TourPic3, TourPic3, TourPic3, TourPic3],
+    included: {
+      deptLocation:
+        "Ayasofya Meydanı, Sultan Ahmet, 34122 Fatih/İstanbul, Turkey",
+      return: "5:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the museum",
+        "Lunch included",
+        "Transportation",
+      ],
+    },
+    itinerary: [
+      ["Guided tour of Hagia Sophia", "Visit to the museum", "Lunch included"],
+      ["Guided tour of Hagia Sophia", "Visit to the museum", "Lunch included"],
+      ["Guided tour of Hagia Sophia", "Visit to the museum", "Lunch included"],
+    ],
   },
   {
     id: 4,
-    name: "The Wharf Miami",
+    name: "Sagrada Familia",
     description:
-      "The Wharf Miami is an open-air event space located on the historic Miami River. It offers a unique setting for events and gatherings, with a focus on food, drinks, and entertainment. The venue features a variety of food trucks, pop-up bars, and live music performances. The Wharf Miami is known for its vibrant atmosphere and scenic views of the river and downtown Miami skyline. It has become a popular destination for locals and tourists alike, offering a dynamic and lively experience in the heart of the city.",
-    priceRange: [50, 200],
+      "The Basílica de la Sagrada Família, also known as the Sagrada Família, is a large unfinished Roman Catholic minor basilica in Barcelona, Catalonia, Spain. Designed by the Catalan architect Antoni Gaudí, his work on the building is part of a UNESCO World Heritage Site.",
+    city: "Barcelona",
+    priceRange: "500 - 750",
     numOfDays: 2,
-    image: TourPic4,
+    coverImage: TourPic4,
+    images: [TourPic4, TourPic4, TourPic4, TourPic4, TourPic4],
+    included: {
+      deptLocation: "Carrer de Mallorca, 401, 08013 Barcelona, Spain",
+      return: "4:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the basilica",
+        "Lunch included",
+        "Transportation",
+      ],
+    },
+    itinerary: [
+      [
+        "Guided tour of Sagrada Familia",
+        "Visit to the basilica",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of Sagrada Familia",
+        "Visit to the basilica",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of Sagrada Familia",
+        "Visit to the basilica",
+        "Lunch included",
+      ],
+    ],
   },
   {
     id: 5,
-    name: "Miami Tower",
+    name: "Colosseum",
     description:
-      "Miami Tower is a 47-story skyscraper in Miami, Florida, United States. It is a landmark building in the city's skyline, known for its distinctive three-tiered design and vibrant lighting displays. The tower was completed in 1987 and was originally known as the Bank of America Tower. It features a mix of office spaces, retail areas, and a sky lobby with panoramic views of the city. The building's exterior lighting system allows it to be illuminated in various colors and patterns, making it a prominent feature of Miami's nighttime skyline.",
-    priceRange: [50, 200],
+      "The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age.",
+    city: "Rome",
+    priceRange: "500 - 1000",
     numOfDays: 2,
-    image: TourPic5,
+    coverImage: TourPic5,
+    images: [TourPic5, TourPic5, TourPic5, TourPic5, TourPic5],
+    included: {
+      deptLocation: "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
+      return: "3:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the Colosseum",
+        "Lunch included",
+        "Transportation",
+      ],
+    },
+    itinerary: [
+      [
+        "Guided tour of the Colosseum",
+        "Visit to the Roman Forum",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of the Colosseum",
+        "Visit to the Roman Forum",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of the Colosseum",
+        "Visit to the Roman Forum",
+        "Lunch included",
+      ],
+    ],
   },
   {
     id: 6,
-    name: "Skyviews Miami",
+    name: "Sydney Opera House",
     description:
-      "Skyviews Miami is a giant observation wheel located in Bayside Marketplace, offering panoramic views of the city and the bay. The observation wheel stands at 200 feet tall and features 42 climate-controlled gondolas, each capable of holding up to eight passengers. The ride provides a unique perspective of Miami's skyline, waterfront, and surrounding areas. Skyviews Miami is a popular attraction for both tourists and locals, offering a memorable experience and stunning photo opportunities. The ride lasts approximately 15 minutes, providing ample time to take in the breathtaking views.",
-    priceRange: [50, 200],
+      "The Sydney Opera House is a multi-venue performing arts centre at Sydney Harbour in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+    city: "Sydney",
+    priceRange: "500 - 1000",
     numOfDays: 2,
-    image: TourPic6,
+    coverImage: TourPic6,
+    images: [TourPic6, TourPic6, TourPic6, TourPic6, TourPic6],
+    included: {
+      deptLocation: "Bennelong Point, Sydney NSW 2000, Australia",
+      return: "8:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the opera house",
+        "Lunch included",
+        "Transportation",
+      ],
+    },
+    itinerary: [
+      [
+        "Guided tour of the Sydney Opera House",
+        "Visit to the concert hall",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of the Sydney Opera House",
+        "Visit to the concert hall",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of the Sydney Opera House",
+        "Visit to the concert hall",
+        "Lunch included",
+      ],
+    ],
+  },
+  {
+    id: 7,
+    name: "Vizcaya Museum and Gardens",
+    description:
+      "The Vizcaya Museum and Gardens is the former villa and estate of businessman James Deering, of the Deering McCormick-International Harvester fortune, on Biscayne Bay in the present day Coconut Grove neighborhood of Miami, Florida.",
+    city: "Miami",
+    priceRange: "50 - 200",
+    numOfDays: 3,
+    coverImage: TourPic6,
+    images: [TourPic6, TourPic6, TourPic6, TourPic6, TourPic6],
+    included: {
+      deptLocation: "3251 S Miami Ave, Miami, FL 33129, United States",
+      return: "5:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the gardens",
+        "Lunch included",
+        "Transportation",
+      ],
+    },
+    itinerary: [
+      [
+        "Guided tour of Vizcaya Museum",
+        "Visit to the gardens",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of Vizcaya Museum",
+        "Visit to the gardens",
+        "Lunch included",
+      ],
+      [
+        "Guided tour of Vizcaya Museum",
+        "Visit to the gardens",
+        "Lunch included",
+      ],
+    ],
+  },
+  {
+    id: 8,
+    name: "Louvre Museum",
+    description:
+      "The Louvre, or the Louvre Museum, is the world's most-visited museum, and a historic landmark in Paris, France. It is the home of the Mona Lisa and many other famous works of art.",
+    city: "Paris",
+    priceRange: "200 - 500",
+    numOfDays: 4,
+    coverImage: TourPic6,
+    images: [TourPic6, TourPic6, TourPic6, TourPic6, TourPic6],
+    included: {
+      deptLocation: "Rue de Rivoli, 75001 Paris, France",
+      return: "6:00 PM",
+      features: [
+        "Guided tour",
+        "Access to the museum",
+        "Lunch included",
+        "Transportation",
+      ],
+    },
+    itinerary: [
+      ["Guided tour of the Louvre", "Visit to the museum", "Lunch included"],
+      ["Guided tour of the Louvre", "Visit to the museum", "Lunch included"],
+      ["Guided tour of the Louvre", "Visit to the museum", "Lunch included"],
+    ],
   },
 ];
 

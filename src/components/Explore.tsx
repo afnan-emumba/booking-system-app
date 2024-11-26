@@ -13,7 +13,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-
+import { Dayjs } from "dayjs";
 import SearchChip from "./SearchChip";
 
 const priceRanges = [
@@ -37,7 +37,7 @@ const priceRanges = [
 
 const searchLocations = [
   "Istanbul",
-  "Dubai",
+  "Miami",
   "Paris",
   "London",
   "New York",
@@ -46,7 +46,7 @@ const searchLocations = [
   "Cape Town",
   "Rio de Janeiro",
   "Bali",
-  "Machu Picchu",
+  "Dubai",
   "Santorini",
   "Barcelona",
   "Rome",
@@ -56,9 +56,17 @@ const searchLocations = [
 
 const Explore = () => {
   const [priceRange, setPriceRange] = useState<string>("0-100");
+  const [location, setLocation] = useState<string>("");
+
+  const [startDate, setStartDate] = useState<Dayjs | null>(null);
+  const [endDate, setEndDate] = useState<Dayjs | null>(null);
 
   const handleChange = (event: SelectChangeEvent) => {
     setPriceRange(event.target.value);
+  };
+
+  const handleLocationClick = (location: string) => {
+    setLocation(location);
   };
 
   return (
@@ -86,6 +94,8 @@ const Explore = () => {
                     variant='outlined'
                     className='explore-input-field'
                     fullWidth
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
                   />
                 </FormControl>
               </div>
@@ -98,12 +108,28 @@ const Explore = () => {
                 <div className='explore-icon'>
                   <CalendarTodayOutlinedIcon />
                 </div>
-                <h3>Choose Date</h3>
+                <h3>Choose Date Range</h3>
               </div>
-              <div className='explore-input'>
+              <div
+                className='explore-input'
+                style={{ display: "flex", gap: "1rem" }}
+              >
                 <FormControl fullWidth>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DatePicker label='Choose Date' />
+                    <DatePicker
+                      label='Start Date'
+                      value={startDate}
+                      onChange={(newValue) => setStartDate(newValue)}
+                    />
+                  </LocalizationProvider>
+                </FormControl>
+                <FormControl fullWidth>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker
+                      label='End Date'
+                      value={endDate}
+                      onChange={(newValue) => setEndDate(newValue)}
+                    />
                   </LocalizationProvider>
                 </FormControl>
               </div>
@@ -148,7 +174,10 @@ const Explore = () => {
           <h2>Popular Searches</h2>
           <div className='search-tags'>
             {searchLocations.map((location) => (
-              <SearchChip title={location} />
+              <SearchChip
+                title={location}
+                onClick={() => handleLocationClick(location)}
+              />
             ))}
           </div>
         </div>

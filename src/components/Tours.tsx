@@ -16,7 +16,7 @@ const Tours = () => {
             >
               <TourCard
                 key={tour.id}
-                image={tour.image}
+                image={tour.coverImage}
                 name={tour.name}
                 description={tour.description}
                 priceRange={tour.priceRange}

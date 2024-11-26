@@ -13,11 +13,9 @@
     color: #ffffff;
 }
 
-html,
 body {
     height: 100%;
     color: #202445;
-
 }
 
 h1 {
@@ -187,8 +185,8 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 15%;
-    padding-top: 2rem;
+    margin: auto 0;
+    padding-top: 10rem;
     padding-bottom: 2rem;
 }
 
@@ -256,7 +254,6 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .search-tags {
@@ -280,6 +277,7 @@ p {
 
 .search-chip:hover {
     background-color: #F4F4F4;
+    cursor: pointer;
 }
 
 .tours-page {
@@ -360,7 +358,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 15%;
+    margin: auto 0;
 }
 
 /* Responsive Styles */
@@ -465,6 +463,10 @@ p {
 
     .image-grid {
         width: 100%;
+    }
+
+    .explore-search-container {
+        padding-top: 4rem;
     }
 
     .explore-search {
