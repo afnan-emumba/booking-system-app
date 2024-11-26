@@ -41,7 +41,7 @@ const TourCard = ({
         <p className='tour-description-short'>{description}</p>
         <div className='tour-card-icons'>
           <div className='tour-card-icon'>
-            <PaidIcon /> ${priceRange[0]} - ${priceRange[1]}
+            <PaidIcon /> ${priceRange}
           </div>
           <div className='tour-card-icon'>
             <AccessTimeFilledIcon /> {numOfDays} days

@@ -4,8 +4,8 @@ import TourPic3 from "./assets/images/tour-card-3.jpg";
 import TourPic4 from "./assets/images/tour-card-4.jpg";
 import TourPic5 from "./assets/images/tour-card-5.jpg";
 import TourPic6 from "./assets/images/tour-card-6.jpg";
-// import TourPic7 from "./assets/images/tour-card-7.jpg";
-// import TourPic8 from "./assets/images/tour-card-8.jpg";
+import TourPic7 from "./assets/images/tour-card-7.jpg";
+import TourPic8 from "./assets/images/tour-card-8.jpg";
 
 const tourDetails = [
   {
@@ -239,8 +239,8 @@ const tourDetails = [
     city: "Miami",
     priceRange: "50 - 200",
     numOfDays: 3,
-    coverImage: TourPic6,
-    images: [TourPic6, TourPic6, TourPic6, TourPic6, TourPic6],
+    coverImage: TourPic7,
+    images: [TourPic7, TourPic7, TourPic7, TourPic7, TourPic7],
     included: {
       deptLocation: "3251 S Miami Ave, Miami, FL 33129, United States",
       return: "5:00 PM",
@@ -277,8 +277,8 @@ const tourDetails = [
     city: "Paris",
     priceRange: "200 - 500",
     numOfDays: 4,
-    coverImage: TourPic6,
-    images: [TourPic6, TourPic6, TourPic6, TourPic6, TourPic6],
+    coverImage: TourPic8,
+    images: [TourPic8, TourPic8, TourPic8, TourPic8, TourPic8],
     included: {
       deptLocation: "Rue de Rivoli, 75001 Paris, France",
       return: "6:00 PM",

@@ -361,6 +361,19 @@ p {
     margin: auto 0;
 }
 
+.tour-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 8%;
+}
+
+.tour-not-found p {
+    text-align: center;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .navbar-list {
