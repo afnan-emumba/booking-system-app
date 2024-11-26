@@ -6,7 +6,7 @@ interface TourCardProps {
   image: string;
   name: string;
   description: string;
-  priceRange: number[];
+  priceRange: string;
   numOfDays: number;
 }
 
