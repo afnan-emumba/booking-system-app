@@ -31,24 +31,36 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      [
-        "Tours with American Sign Language",
-        "Audio description group tours",
-        "Large-print gallery notes",
-        "Lunch Included",
-      ],
-      [
-        "Tours with American Sign Language",
-        "Audio description group tours",
-        "Large-print gallery notes",
-        "Lunch Included",
-      ],
-      [
-        "Tours with American Sign Language",
-        "Audio description group tours",
-        "Large-print gallery notes",
-        "Lunch Included",
-      ],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Tours with American Sign Language",
+          "Audio description group tours",
+          "Large-print gallery notes",
+          "Lunch Included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Tours with American Sign Language",
+          "Audio description group tours",
+          "Large-print gallery notes",
+          "Lunch Included",
+        ],
+      },
+      {
+        day: 3,
+        weather: 20,
+        schedule: [
+          "Tours with American Sign Language",
+          "Audio description group tours",
+          "Large-print gallery notes",
+          "Lunch Included",
+        ],
+      },
     ],
   },
   {
@@ -73,21 +85,24 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      [
-        "Guided tour of the Eiffel Tower",
-        "Access to the summit",
-        "Lunch at the Eiffel Tower restaurant",
-      ],
-      [
-        "Guided tour of the Eiffel Tower",
-        "Access to the summit",
-        "Lunch at the Eiffel Tower restaurant",
-      ],
-      [
-        "Guided tour of the Eiffel Tower",
-        "Access to the summit",
-        "Lunch at the Eiffel Tower restaurant",
-      ],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of the Eiffel Tower",
+          "Access to the summit",
+          "Lunch at the Eiffel Tower restaurant",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of the Eiffel Tower",
+          "Access to the summit",
+          "Lunch at the Eiffel Tower restaurant",
+        ],
+      },
     ],
   },
   {
@@ -112,9 +127,33 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      ["Guided tour of Hagia Sophia", "Visit to the museum", "Lunch included"],
-      ["Guided tour of Hagia Sophia", "Visit to the museum", "Lunch included"],
-      ["Guided tour of Hagia Sophia", "Visit to the museum", "Lunch included"],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of Hagia Sophia",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of Hagia Sophia",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 3,
+        weather: 20,
+        schedule: [
+          "Guided tour of Hagia Sophia",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
     ],
   },
   {
@@ -138,21 +177,24 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      [
-        "Guided tour of Sagrada Familia",
-        "Visit to the basilica",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of Sagrada Familia",
-        "Visit to the basilica",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of Sagrada Familia",
-        "Visit to the basilica",
-        "Lunch included",
-      ],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of Sagrada Familia",
+          "Visit to the basilica",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of Sagrada Familia",
+          "Visit to the basilica",
+          "Lunch included",
+        ],
+      },
     ],
   },
   {
@@ -176,21 +218,24 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      [
-        "Guided tour of the Colosseum",
-        "Visit to the Roman Forum",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of the Colosseum",
-        "Visit to the Roman Forum",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of the Colosseum",
-        "Visit to the Roman Forum",
-        "Lunch included",
-      ],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of the Colosseum",
+          "Visit to the Roman Forum",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of the Colosseum",
+          "Visit to the Roman Forum",
+          "Lunch included",
+        ],
+      },
     ],
   },
   {
@@ -214,21 +259,24 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      [
-        "Guided tour of the Sydney Opera House",
-        "Visit to the concert hall",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of the Sydney Opera House",
-        "Visit to the concert hall",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of the Sydney Opera House",
-        "Visit to the concert hall",
-        "Lunch included",
-      ],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of the Sydney Opera House",
+          "Visit to the concert hall",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of the Sydney Opera House",
+          "Visit to the concert hall",
+          "Lunch included",
+        ],
+      },
     ],
   },
   {
@@ -252,21 +300,33 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      [
-        "Guided tour of Vizcaya Museum",
-        "Visit to the gardens",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of Vizcaya Museum",
-        "Visit to the gardens",
-        "Lunch included",
-      ],
-      [
-        "Guided tour of Vizcaya Museum",
-        "Visit to the gardens",
-        "Lunch included",
-      ],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of Vizcaya Museum",
+          "Visit to the gardens",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of Vizcaya Museum",
+          "Visit to the gardens",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 3,
+        weather: 20,
+        schedule: [
+          "Guided tour of Vizcaya Museum",
+          "Visit to the gardens",
+          "Lunch included",
+        ],
+      },
     ],
   },
   {
@@ -290,9 +350,42 @@ const tourDetails = [
       ],
     },
     itinerary: [
-      ["Guided tour of the Louvre", "Visit to the museum", "Lunch included"],
-      ["Guided tour of the Louvre", "Visit to the museum", "Lunch included"],
-      ["Guided tour of the Louvre", "Visit to the museum", "Lunch included"],
+      {
+        day: 1,
+        weather: 25,
+        schedule: [
+          "Guided tour of the Louvre",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 2,
+        weather: 22,
+        schedule: [
+          "Guided tour of the Louvre",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 3,
+        weather: 20,
+        schedule: [
+          "Guided tour of the Louvre",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
+      {
+        day: 4,
+        weather: 25,
+        schedule: [
+          "Guided tour of the Louvre",
+          "Visit to the museum",
+          "Lunch included",
+        ],
+      },
     ],
   },
 ];
