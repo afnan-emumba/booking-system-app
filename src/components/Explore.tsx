@@ -15,6 +15,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Dayjs } from "dayjs";
 import SearchChip from "./SearchChip";
+import { useNavigate } from "react-router-dom";
 
 const priceRanges = [
   {
@@ -61,12 +62,20 @@ const Explore = () => {
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
 
+  const navigate = useNavigate();
+
   const handleChange = (event: SelectChangeEvent) => {
     setPriceRange(event.target.value);
   };
 
   const handleLocationClick = (location: string) => {
     setLocation(location);
+  };
+
+  const handleSearch = () => {
+    if (location) {
+      navigate(`/tours/${location}`);
+    }
   };
 
   return (
@@ -164,7 +173,11 @@ const Explore = () => {
               </div>
             </div>
 
-            <Button variant='contained' className='search-btn'>
+            <Button
+              variant='contained'
+              className='search-btn'
+              onClick={handleSearch}
+            >
               <SearchIcon fontSize='medium' style={{ color: "#fff" }} />
             </Button>
           </Paper>

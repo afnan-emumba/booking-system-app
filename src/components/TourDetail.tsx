@@ -5,6 +5,8 @@ import PaidIcon from "@mui/icons-material/Paid";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import PlaceIcon from "@mui/icons-material/Place";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const TourDetail = () => {
   const { id } = useParams();
@@ -92,10 +94,10 @@ const TourDetail = () => {
       </div>
 
       <h2>Itinerary Schedule</h2>
-      <div className="tour-details-itinerary">
+      <div className='tour-details-itinerary'>
         {tour.itinerary.map((day, index) => (
-          <div key={index} className="itinerary-card">
-            <div className="itinerary-card-header">
+          <div key={index} className='itinerary-card'>
+            <div className='itinerary-card-header'>
               <h3>Day {day.day}</h3>
               <span>{day.weather}°C</span>
             </div>
@@ -107,6 +109,13 @@ const TourDetail = () => {
           </div>
         ))}
       </div>
+      {/* <div className='book-tour-btn-container'> */}
+      <Link to={`/book-tour/${id}`} className='book-tour-link'>
+        <Button variant='contained' className='book-tour-btn'>
+          Book Now
+        </Button>
+      </Link>
+      {/* </div> */}
     </div>
   );
 };
