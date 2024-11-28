@@ -28,11 +28,11 @@ const Navbar = () => {
           style={{ listStyle: "none" }}
         >
           <Link className='navbar-link' to={"/tours"} onClick={toggleMenu}>
-            <li>Tours</li>
+            <li>All Tours</li>
           </Link>
-          <Link className='navbar-link' to={"/add-tour"} onClick={toggleMenu}>
+          {/* <Link className='navbar-link' to={"/add-tour"} onClick={toggleMenu}>
             <li>Add Tour</li>
-          </Link>
+          </Link> */}
           <Link className='navbar-link' to={"/my-tours"} onClick={toggleMenu}>
             <li>My Tours</li>
           </Link>
