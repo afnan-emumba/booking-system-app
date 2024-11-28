@@ -502,6 +502,9 @@ p {
 }
 
 .book-tour-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 2rem;
 }
 
@@ -512,15 +515,46 @@ p {
     width: 40%;
 }
 
-.book-tour-image {
-    width: 50%;
-    height: 90%;
+.book-tour-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -2rem -2rem -2rem 0;
+}
+
+.book-tour-img img {
+    width: 100%;
     object-fit: cover;
-    border-radius: 0;
-    margin: 0;
-    position: fixed;
-    right: 0;
+    overflow: hidden;
+}
+
+.my-tours-page {
+    padding: 2rem;
+}
+
+.my-tour-card {
+    position: relative;
+}
+
+.my-tour-card-buttons {
+    display: none;
+    position: absolute;
     bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.my-tour-card:hover .tour-description-short,
+.my-tour-card:hover .tour-card-icons {
+    display: none;
+}
+
+.my-tour-card:hover .my-tour-card-buttons {
+    display: flex;
 }
 
 /* Responsive Styles */
@@ -711,7 +745,7 @@ p {
         width: 100%;
     }
 
-    .book-tour-image {
+    .book-tour-img {
         display: none;
     }
 }

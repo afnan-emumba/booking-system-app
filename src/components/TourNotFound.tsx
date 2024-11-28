@@ -10,9 +10,13 @@ const TourNotFound = (props: TourNotFoundProps) => {
   return (
     <div className='tour-not-found'>
       <img src={NoData} alt='No Data' />
-      <p>Sorry, we couldn't find any tour at "{props.city}" right now</p>
+      <p>
+        {props.city
+          ? `Sorry, we couldn't find any tour at "${props.city}" right now`
+          : "Sorry, we couldn't find any tour"}
+      </p>
       <Link to={"/explore-tours"}>
-        <Button variant='contained'>Back to Explore</Button>
+        <Button variant='contained'>Explore Tours</Button>
       </Link>
     </div>
   );

@@ -3,15 +3,41 @@ import tourDetails from "../tourDetails";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import TourNotFound from "./TourNotFound";
+import { useEffect, useState } from "react";
+
+interface Tour {
+  id: number;
+  name: string;
+  description: string;
+  city: string;
+  priceRange: string;
+  numOfDays: number;
+  coverImage: string;
+  images: string[];
+  included: {
+    deptLocation: string;
+    return: string;
+    features: string[];
+  };
+  itinerary: {
+    day: number;
+    weather: number;
+    schedule: string[];
+  }[];
+}
 
 const Tours = () => {
   const { city } = useParams();
+  const [filteredTours, setFilteredTours] = useState<Tour[]>([]);
 
-  const filteredTours = city
-    ? tourDetails.filter(
-        (tour) => tour.city.toLowerCase() === city.toLowerCase()
-      )
-    : tourDetails;
+  useEffect(() => {
+    const tours = city
+      ? tourDetails.filter(
+          (tour) => tour.city.toLowerCase() === city.toLowerCase()
+        )
+      : tourDetails;
+    setFilteredTours(tours);
+  }, [city]);
 
   return (
     <div className='tours-page'>
@@ -20,22 +46,15 @@ const Tours = () => {
       {filteredTours.length > 0 ? (
         <div className='tour-cards'>
           {filteredTours.map((tour) => (
-            <>
-              <Link
-                className='navbar-link'
-                to={`/tour/${tour.id}`}
-                target='_blank'
-              >
-                <TourCard
-                  key={tour.id}
-                  image={tour.coverImage}
-                  name={tour.name}
-                  description={tour.description}
-                  priceRange={tour.priceRange}
-                  numOfDays={tour.numOfDays}
-                />
-              </Link>
-            </>
+            <Link key={tour.id} className='navbar-link' to={`/tour/${tour.id}`}>
+              <TourCard
+                image={tour.coverImage}
+                name={tour.name}
+                description={tour.description}
+                priceRange={tour.priceRange}
+                numOfDays={tour.numOfDays}
+              />
+            </Link>
           ))}
         </div>
       ) : (

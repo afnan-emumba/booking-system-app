@@ -7,6 +7,7 @@ import TourDetail from "./components/TourDetail";
 import ErrorPage from "./components/ErrorPage";
 import BookTour from "./components/BookTour";
 import MyTours from "./components/MyTours";
+import UpdateTour from "./components/UpdateTour";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/tour/:id' element={<TourDetail />} />
           <Route path='/book-tour/:id' element={<BookTour />} />
           <Route path='/my-tours/' element={<MyTours />} />
+          <Route path='/update-tour/:id' element={<UpdateTour />} />
           <Route path='*' element={<ErrorPage />} />
         </Route>
       </Routes>
