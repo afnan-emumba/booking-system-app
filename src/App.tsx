@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -24,6 +25,7 @@ function App() {
           <Route path='*' element={<ErrorPage />} />
         </Route>
       </Routes>
+      <SpeedInsights />
     </div>
   );
 }
