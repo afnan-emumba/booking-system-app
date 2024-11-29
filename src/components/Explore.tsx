@@ -6,7 +6,6 @@ import {
   Paper,
   Button,
   TextField,
-  InputLabel,
   MenuItem,
   FormControl,
   Select,
@@ -60,8 +59,15 @@ const searchLocations = [
   "Prague",
 ];
 
+const formControlStyles = {
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": { border: "none" },
+  },
+  "& .MuiInputBase-input": { color: "##75778B" },
+};
+
 const Explore = () => {
-  const [priceRange, setPriceRange] = useState<string>("0-100");
+  const [priceRange, setPriceRange] = useState<string>("");
   const [location, setLocation] = useState<string>("");
 
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
@@ -101,7 +107,7 @@ const Explore = () => {
                 <h3>Location</h3>
               </div>
               <div className='explore-input'>
-                <FormControl fullWidth>
+                <FormControl fullWidth sx={formControlStyles}>
                   <TextField
                     id='outlined-basic'
                     label='Where to?'
@@ -126,7 +132,7 @@ const Explore = () => {
                 className='explore-input'
                 style={{ display: "flex", gap: "1rem" }}
               >
-                <FormControl fullWidth>
+                <FormControl fullWidth sx={formControlStyles}>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                       label='Start Date'
@@ -135,7 +141,7 @@ const Explore = () => {
                     />
                   </LocalizationProvider>
                 </FormControl>
-                <FormControl fullWidth>
+                <FormControl fullWidth sx={formControlStyles}>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                       label='End Date'
@@ -155,17 +161,26 @@ const Explore = () => {
                 <h3>Price Range</h3>
               </div>
               <div className='explore-input'>
-                <FormControl fullWidth>
-                  <InputLabel id='demo-simple-select-label'>
-                    Choose Price
-                  </InputLabel>
+                <FormControl
+                  fullWidth
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": { border: "none" },
+                    },
+                    "& .MuiInputBase-input": { color: "#75778B" },
+                  }}
+                >
                   <Select
                     labelId='demo-simple-select-label'
+                    label='Where to?'
                     id='demo-simple-select'
                     value={priceRange}
-                    label='Choose Price'
+                    displayEmpty
                     onChange={handleChange}
                   >
+                    <MenuItem value='' disabled>
+                      Choose Price
+                    </MenuItem>
                     {priceRanges.map((range) => (
                       <MenuItem value={range.value}>{range.label}</MenuItem>
                     ))}
