@@ -1,21 +1,26 @@
 import { useState } from "react";
-import { Paper, Button } from "@mui/material";
-import Divider from "@mui/material/Divider";
+import { useNavigate } from "react-router-dom";
+import { Dayjs } from "dayjs";
+
+import {
+  Paper,
+  Button,
+  TextField,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
-import TextField from "@mui/material/TextField";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { Dayjs } from "dayjs";
+
 import SearchChip from "./SearchChip";
-import { useNavigate } from "react-router-dom";
 
 const priceRanges = [
   {
@@ -110,8 +115,6 @@ const Explore = () => {
               </div>
             </div>
 
-            <Divider orientation='vertical' flexItem sx={{ display: "none" }} />
-
             <div className='explore-input-container'>
               <div className='explore-heading'>
                 <div className='explore-icon'>
@@ -143,8 +146,6 @@ const Explore = () => {
                 </FormControl>
               </div>
             </div>
-
-            <Divider orientation='vertical' flexItem sx={{ display: "none" }} />
 
             <div className='explore-input-container'>
               <div className='explore-heading'>

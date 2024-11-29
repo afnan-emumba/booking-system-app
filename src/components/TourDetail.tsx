@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
-import tourDetails from "../tourDetails";
-import ErrorPage from "./ErrorPage";
+import { Link } from "react-router-dom";
+
+import { Button } from "@mui/material";
 import PaidIcon from "@mui/icons-material/Paid";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import PlaceIcon from "@mui/icons-material/Place";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+
+import tourDetails from "../tourDetails";
+import ErrorPage from "./ErrorPage";
 
 const TourDetail = () => {
   const { id } = useParams();

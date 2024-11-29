@@ -1,9 +1,10 @@
-import TourCard from "./TourCard";
-import tourDetails from "../tourDetails";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+
+import TourCard from "./TourCard";
+import tourDetails from "../tourDetails";
 import TourNotFound from "./TourNotFound";
-import { useEffect, useState } from "react";
 
 interface Tour {
   id: number;

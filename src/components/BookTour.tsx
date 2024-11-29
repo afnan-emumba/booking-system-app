@@ -1,3 +1,9 @@
+import { useDispatch } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
+import { useForm, Controller } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 import {
   Button,
   TextField,
@@ -7,15 +13,12 @@ import {
   FormLabel,
   Box,
 } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { addTour } from "../features/bookedTours/bookedToursSlice";
+
 import tourDetails from "../tourDetails";
-import { useParams, useNavigate } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import BookTourImage from "../assets/images/book-tour.jpg";
-import { useForm, Controller } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+
+import { addTour } from "../features/bookedTours/bookedToursSlice";
 
 const schema = yup.object().shape({
   name: yup
@@ -58,7 +61,7 @@ const BookTour = () => {
     formState: { errors, isValid },
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onChange",
+    mode: "onSubmit",
   });
 
   const dispatch = useDispatch();
@@ -71,14 +74,6 @@ const BookTour = () => {
     if (tour) {
       const bookingData = {
         ...tour,
-        user: {
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          adults: data.adults,
-          children: data.children,
-          paymentMethod: data.paymentMethod,
-        },
       };
       dispatch(addTour(bookingData));
       navigate("/my-tours");

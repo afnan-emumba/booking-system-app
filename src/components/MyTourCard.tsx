@@ -1,18 +1,22 @@
-import { Box, Button, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
-import PaidIcon from "@mui/icons-material/Paid";
-import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch } from "react-redux";
-import { removeTour } from "../features/bookedTours/bookedToursSlice";
 import { useState } from "react";
+
 import {
   Dialog,
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
+  Box,
+  Button,
+  IconButton,
 } from "@mui/material";
+import PaidIcon from "@mui/icons-material/Paid";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import DeleteIcon from "@mui/icons-material/Delete";
+
+import { removeTour } from "../features/bookedTours/bookedToursSlice";
 
 interface MyTourCardProps {
   id: number;

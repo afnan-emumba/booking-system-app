@@ -1,5 +1,7 @@
-import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+
+import { Button } from "@mui/material";
+
 import NoData from "../assets/images/no-data.png";
 
 interface TourNotFoundProps {
