@@ -112,13 +112,11 @@ const TourDetail = () => {
           </div>
         ))}
       </div>
-      {/* <div className='book-tour-btn-container'> */}
       <Link to={`/book-tour/${id}`} className='book-tour-link'>
         <Button variant='contained' className='book-tour-btn'>
           Book Now
         </Button>
       </Link>
-      {/* </div> */}
     </div>
   );
 };

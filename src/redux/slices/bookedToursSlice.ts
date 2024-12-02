@@ -30,8 +30,6 @@ interface Tour {
   numOfDays: number;
   coverImage: string;
   images: string[];
-  startDate: string;
-  endDate: string;
   included: Included;
   itinerary: Itinerary[];
   user: User;

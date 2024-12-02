@@ -1,5 +1,3 @@
-import dayjs from "dayjs";
-
 import TourPic1 from "../assets/images/tour-card-1.jpg";
 import TourPic2 from "../assets/images/tour-card-2.jpg";
 import TourPic3 from "../assets/images/tour-card-3.jpg";
@@ -19,9 +17,7 @@ export const tourDetails = [
     priceRange: "50 - 200",
     coverImage: TourPic1,
     images: [TourPic1, TourPic1, TourPic1, TourPic1, TourPic1],
-    startDate: "2024-12-05",
-    endDate: "2024-12-08",
-    numOfDays: dayjs("2024-12-04").diff(dayjs("2024-12-01"), "day") + 1,
+    numOfDays: 4,
     included: {
       deptLocation: "2000 Brush St, Detroit, MI 48226, United States",
       return: "7:00 PM",
@@ -84,11 +80,9 @@ export const tourDetails = [
       "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887 to 1889 as the entrance to the 1889 World's Fair, it was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognizable structures in the world.",
     city: "Paris",
     priceRange: "200 - 500",
-    numOfDays: dayjs("2024-12-12").diff(dayjs("2024-12-10"), "day") + 1,
+    numOfDays: 3,
     coverImage: TourPic2,
     images: [TourPic2, TourPic2, TourPic2, TourPic2, TourPic2],
-    startDate: "2024-12-10",
-    endDate: "2024-12-12",
     included: {
       deptLocation:
         "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
@@ -137,11 +131,9 @@ export const tourDetails = [
       "Hagia Sophia, officially the Hagia Sophia Grand Mosque, is a Late Antique place of worship in Istanbul. Built in 537 as the patriarchal cathedral of the imperial capital of Constantinople, it was the largest Christian church of the eastern Roman Empire (the Byzantine Empire) and the Eastern Orthodox Church, except during the Latin Empire from 1204 to 1261, when it became the city's Latin Catholic cathedral.",
     city: "Istanbul",
     priceRange: "50 - 200",
-    numOfDays: dayjs("2024-12-17").diff(dayjs("2024-12-15"), "day") + 1,
+    numOfDays: 3,
     coverImage: TourPic3,
     images: [TourPic3, TourPic3, TourPic3, TourPic3, TourPic3],
-    startDate: "2024-12-15",
-    endDate: "2024-12-17",
     included: {
       deptLocation:
         "Ayasofya Meydanı, Sultan Ahmet, 34122 Fatih/İstanbul, Turkey",
@@ -190,11 +182,9 @@ export const tourDetails = [
       "The Basílica de la Sagrada Família, also known as the Sagrada Família, is a large unfinished Roman Catholic minor basilica in Barcelona, Catalonia, Spain. Designed by the Catalan architect Antoni Gaudí, his work on the building is part of a UNESCO World Heritage Site.",
     city: "Barcelona",
     priceRange: "500 - 750",
-    numOfDays: dayjs("2024-12-21").diff(dayjs("2024-12-20"), "day") + 1,
+    numOfDays: 2,
     coverImage: TourPic4,
     images: [TourPic4, TourPic4, TourPic4, TourPic4, TourPic4],
-    startDate: "2024-12-20",
-    endDate: "2024-12-21",
     included: {
       deptLocation: "Carrer de Mallorca, 401, 08013 Barcelona, Spain",
       return: "4:00 PM",
@@ -233,11 +223,9 @@ export const tourDetails = [
       "The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age.",
     city: "Rome",
     priceRange: "500 - 1000",
-    numOfDays: dayjs("2024-12-26").diff(dayjs("2024-12-25"), "day") + 1,
+    numOfDays: 2,
     coverImage: TourPic5,
     images: [TourPic5, TourPic5, TourPic5, TourPic5, TourPic5],
-    startDate: "2024-12-25",
-    endDate: "2024-12-26",
     included: {
       deptLocation: "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
       return: "3:00 PM",
@@ -276,11 +264,9 @@ export const tourDetails = [
       "The Sydney Opera House is a multi-venue performing arts centre at Sydney Harbour in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
     city: "Sydney",
     priceRange: "500 - 1000",
-    numOfDays: dayjs("2025-01-01").diff(dayjs("2024-12-30"), "day") + 1,
+    numOfDays: 3,
     coverImage: TourPic6,
     images: [TourPic6, TourPic6, TourPic6, TourPic6, TourPic6],
-    startDate: "2024-12-30",
-    endDate: "2025-01-01",
     included: {
       deptLocation: "Bennelong Point, Sydney NSW 2000, Australia",
       return: "8:00 PM",
@@ -328,11 +314,9 @@ export const tourDetails = [
       "The Vizcaya Museum and Gardens is the former villa and estate of businessman James Deering, of the Deering McCormick-International Harvester fortune, on Biscayne Bay in the present day Coconut Grove neighborhood of Miami, Florida.",
     city: "Miami",
     priceRange: "50 - 200",
-    numOfDays: dayjs("2025-01-07").diff(dayjs("2025-01-05"), "day") + 1,
+    numOfDays: 3,
     coverImage: TourPic7,
     images: [TourPic7, TourPic7, TourPic7, TourPic7, TourPic7],
-    startDate: "2025-01-05",
-    endDate: "2025-01-07",
     included: {
       deptLocation: "3251 S Miami Ave, Miami, FL 33129, United States",
       return: "5:00 PM",
@@ -380,11 +364,9 @@ export const tourDetails = [
       "The Louvre, or the Louvre Museum, is the world's most-visited museum, and a historic landmark in Paris, France. It is the home of the Mona Lisa and many other famous works of art.",
     city: "Paris",
     priceRange: "200 - 500",
-    numOfDays: dayjs("2025-01-13").diff(dayjs("2025-01-10"), "day") + 1,
+    numOfDays: 4,
     coverImage: TourPic8,
     images: [TourPic8, TourPic8, TourPic8, TourPic8, TourPic8],
-    startDate: "2025-01-10",
-    endDate: "2025-01-13",
     included: {
       deptLocation: "Rue de Rivoli, 75001 Paris, France",
       return: "6:00 PM",
