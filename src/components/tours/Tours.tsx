@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import TourCard from "../tourCard/TourCard";
 import { tourDetails } from "../../utils/constants";
 import TourNotFound from "../tourNotFound/TourNotFound";
-import "./Tours.css"; // Added import for CSS
+import "./Tours.css";
 
 interface Tour {
   id: number;
