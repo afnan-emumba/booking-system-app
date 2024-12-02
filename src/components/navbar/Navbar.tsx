@@ -5,7 +5,7 @@ import { Button, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import Logo from "../assets/Logo";
+import Logo from "../../assets/Logo";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import {
@@ -14,40 +13,12 @@ import {
   Box,
 } from "@mui/material";
 
-import tourDetails from "../tourDetails";
-import ErrorPage from "./ErrorPage";
-import BookTourImage from "../assets/images/book-tour.jpg";
+import { tourDetails } from "../../utils/constants";
+import ErrorPage from "../errorPage/ErrorPage";
+import BookTourImage from "../../assets/images/book-tour.jpg";
 
-import { addTour } from "../features/bookedTours/bookedToursSlice";
-
-const schema = yup.object().shape({
-  name: yup
-    .string()
-    .matches(
-      /^[a-zA-Z\s-]+$/,
-      "Only alphabets, spaces, and hyphens are allowed"
-    )
-    .max(50, "Maximum 50 characters")
-    .required("Name is required"),
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  phone: yup
-    .string()
-    .matches(/^\d{11}$/, "Phone number must be 11 digits")
-    .required("Phone number is required"),
-  adults: yup
-    .number()
-    .min(1, "At least 1 adult is required")
-    .max(9, "Maximum 9 adults")
-    .required("Number of adults is required"),
-  children: yup.number().min(0).max(9).notRequired(),
-  paymentMethod: yup
-    .string()
-    .oneOf(["Visa", "MasterCard"])
-    .required("Payment method is required"),
-});
+import { addTour } from "../../redux/slices/bookedToursSlice";
+import { bookingSchema } from "../../utils/validation";
 
 const BookTour = () => {
   const { id } = useParams();
@@ -60,7 +31,7 @@ const BookTour = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(bookingSchema),
     mode: "onChange",
   });
 

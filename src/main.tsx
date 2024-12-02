@@ -6,9 +6,9 @@ import { Provider } from "react-redux";
 import { ThemeProvider } from "@mui/material";
 
 import App from "./App.tsx";
-import theme from "./theme.ts";
+import theme from "./theme/theme.ts";
 
-import { store } from "./store";
+import { store } from "./redux/store";
 
 import "./index.css";
 

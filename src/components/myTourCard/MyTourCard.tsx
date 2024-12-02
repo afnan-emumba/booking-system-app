@@ -16,7 +16,7 @@ import PaidIcon from "@mui/icons-material/Paid";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-import { removeTour } from "../features/bookedTours/bookedToursSlice";
+import { removeTour } from "../../redux/slices/bookedToursSlice";
 
 interface MyTourCardProps {
   id: number;

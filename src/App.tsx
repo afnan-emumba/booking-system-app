@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Explore from "./components/Explore";
-import Tours from "./components/Tours";
-import TourDetail from "./components/TourDetail";
-import ErrorPage from "./components/ErrorPage";
-import BookTour from "./components/BookTour";
-import MyTours from "./components/MyTours";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./components/home/Home";
+import Explore from "./components/explore/Explore";
+import Tours from "./components/tours/Tours";
+import TourDetail from "./components/tourDetail/TourDetail";
+import ErrorPage from "./components/errorPage/ErrorPage";
+import BookTour from "./components/bookTour/BookTour";
+import MyTours from "./components/myTours/MyTours";
 
 function App() {
   return (

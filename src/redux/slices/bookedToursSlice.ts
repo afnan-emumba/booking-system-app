@@ -1,17 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Tour {
-  id: number;
-  name: string;
-  description: string;
-  priceRange: string;
-  numOfDays: number;
-  coverImage: string;
-}
-
-interface BookedToursState {
-  tours: Tour[];
-}
+import { Tour, BookedToursState } from "../interfaces";
 
 const initialState: BookedToursState = {
   tours: JSON.parse(localStorage.getItem("bookedTours") || "[]"),

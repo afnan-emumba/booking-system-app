@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { Button } from "@mui/material";
 
-import NoData from "../assets/images/no-data.png";
+import NoData from "../../assets/images/no-data.png";
 
 interface TourNotFoundProps {
   city?: string;

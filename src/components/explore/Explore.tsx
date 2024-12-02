@@ -24,45 +24,9 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Popover from "@mui/material/Popover";
 
-import SearchChip from "./SearchChip";
-
-const priceRanges = [
-  {
-    value: "50-200",
-    label: "$50 - $200",
-  },
-  {
-    value: "200-500",
-    label: "$200 - $500",
-  },
-  {
-    value: "500-1000",
-    label: "$500 - $1000",
-  },
-  {
-    value: "1000",
-    label: "$1000 & Above",
-  },
-];
-
-const searchLocations = [
-  "Istanbul",
-  "Miami",
-  "Paris",
-  "London",
-  "New York",
-  "Tokyo",
-  "Sydney",
-  "Cape Town",
-  "Rio de Janeiro",
-  "Bali",
-  "Dubai",
-  "Santorini",
-  "Barcelona",
-  "Rome",
-  "Venice",
-  "Prague",
-];
+import SearchChip from "../searchChip/SearchChip";
+import { priceRanges } from "../../utils/constants";
+import { searchLocations } from "../../utils/constants";
 
 const formControlStyles = {
   "& .MuiOutlinedInput-root": {

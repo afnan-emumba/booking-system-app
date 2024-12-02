@@ -7,8 +7,8 @@ import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import PlaceIcon from "@mui/icons-material/Place";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-import tourDetails from "../tourDetails";
-import ErrorPage from "./ErrorPage";
+import { tourDetails } from "../../utils/constants";
+import ErrorPage from "../errorPage/ErrorPage";
 
 const TourDetail = () => {
   const { id } = useParams();

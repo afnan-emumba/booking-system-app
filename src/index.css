@@ -514,8 +514,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 4rem;
-    height: calc(100vh - 4.5rem);
+    padding: 2rem 4rem;
+    height: auto;
     overflow: hidden;
 }
 
@@ -531,6 +531,7 @@ p {
     justify-content: center;
     align-items: center;
     margin-right: -4rem;
+    margin-top: -2rem;
     overflow: hidden;
 }
 

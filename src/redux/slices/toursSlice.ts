@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import tourDetails from "../../tourDetails";
+import { tourDetails } from "../../utils/constants";
 
 const toursSlice = createSlice({
   name: "tours",

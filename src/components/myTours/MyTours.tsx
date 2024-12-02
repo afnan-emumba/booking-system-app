@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 
-import MyTourCard from "./MyTourCard";
-import TourNotFound from "./TourNotFound";
+import MyTourCard from "../myTourCard/MyTourCard";
+import TourNotFound from "../tourNotFound/TourNotFound";
 
-import { RootState } from "../store";
+import { RootState } from "../../redux/store";
 
 const MyTours = () => {
   const bookedTours = useSelector(

@@ -1,14 +1,15 @@
-import TourPic1 from "./assets/images/tour-card-1.jpg";
-import TourPic2 from "./assets/images/tour-card-2.jpg";
-import TourPic3 from "./assets/images/tour-card-3.jpg";
-import TourPic4 from "./assets/images/tour-card-4.jpg";
-import TourPic5 from "./assets/images/tour-card-5.jpg";
-import TourPic6 from "./assets/images/tour-card-6.jpg";
-import TourPic7 from "./assets/images/tour-card-7.jpg";
-import TourPic8 from "./assets/images/tour-card-8.jpg";
 import dayjs from "dayjs";
 
-const tourDetails = [
+import TourPic1 from "../assets/images/tour-card-1.jpg";
+import TourPic2 from "../assets/images/tour-card-2.jpg";
+import TourPic3 from "../assets/images/tour-card-3.jpg";
+import TourPic4 from "../assets/images/tour-card-4.jpg";
+import TourPic5 from "../assets/images/tour-card-5.jpg";
+import TourPic6 from "../assets/images/tour-card-6.jpg";
+import TourPic7 from "../assets/images/tour-card-7.jpg";
+import TourPic8 from "../assets/images/tour-card-8.jpg";
+
+export const tourDetails = [
   {
     id: 1,
     name: "Pérez Art Museum Miami",
@@ -435,4 +436,40 @@ const tourDetails = [
   },
 ];
 
-export default tourDetails;
+export const priceRanges = [
+  {
+    value: "50-200",
+    label: "$50 - $200",
+  },
+  {
+    value: "200-500",
+    label: "$200 - $500",
+  },
+  {
+    value: "500-1000",
+    label: "$500 - $1000",
+  },
+  {
+    value: "1000",
+    label: "$1000 & Above",
+  },
+];
+
+export const searchLocations = [
+  "Istanbul",
+  "Miami",
+  "Paris",
+  "London",
+  "New York",
+  "Tokyo",
+  "Sydney",
+  "Cape Town",
+  "Rio de Janeiro",
+  "Bali",
+  "Dubai",
+  "Santorini",
+  "Barcelona",
+  "Rome",
+  "Venice",
+  "Prague",
+];
