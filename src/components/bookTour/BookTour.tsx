@@ -19,6 +19,7 @@ import BookTourImage from "../../assets/images/book-tour.jpg";
 
 import { addTour } from "../../redux/slices/bookedToursSlice";
 import { bookingSchema } from "../../utils/validation";
+import "./BookTour.css";
 
 const BookTour = () => {
   const { id } = useParams();

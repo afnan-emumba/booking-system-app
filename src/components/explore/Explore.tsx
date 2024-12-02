@@ -27,6 +27,7 @@ import Popover from "@mui/material/Popover";
 import SearchChip from "../searchChip/SearchChip";
 import { priceRanges } from "../../utils/constants";
 import { searchLocations } from "../../utils/constants";
+import "./Explore.css";
 
 const formControlStyles = {
   "& .MuiOutlinedInput-root": {

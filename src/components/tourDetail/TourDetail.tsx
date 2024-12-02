@@ -9,6 +9,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import { tourDetails } from "../../utils/constants";
 import ErrorPage from "../errorPage/ErrorPage";
+import "./TourDetail.css";
 
 const TourDetail = () => {
   const { id } = useParams();

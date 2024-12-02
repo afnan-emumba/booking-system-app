@@ -1,3 +1,5 @@
+import "./SearchChip.css";
+
 interface SearchChipProps {
   title: string;
   onClick?: () => void;

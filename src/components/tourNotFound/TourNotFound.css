@@ -1,0 +1,18 @@
+.tour-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 8%;
+}
+
+.tour-not-found p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tour-not-found {
+        padding: 1rem;
+    }
+}

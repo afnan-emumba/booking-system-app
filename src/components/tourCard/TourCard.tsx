@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import PaidIcon from "@mui/icons-material/Paid";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import './TourCard.css'; // Add this line
 
 interface TourCardProps {
   image: string;

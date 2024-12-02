@@ -6,6 +6,7 @@ import HomeImage1 from "../../assets/images/home-pic-1.jpg";
 import HomeImage2 from "../../assets/images/home-pic-2.jpg";
 import HomeImage3 from "../../assets/images/home-pic-3.jpg";
 import LineBelowText from "../../assets/images/line-below-text.svg";
+import "./Home.css";
 
 const Home = () => {
   return (

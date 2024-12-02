@@ -1,0 +1,43 @@
+.my-tours-page {
+    padding: 2rem 4rem;
+}
+
+.tour-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 3rem;
+    width: auto;
+    margin: 2rem auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .tour-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .my-tours-page {
+        padding: 1rem;
+    }
+
+    .tour-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-card {
+        margin-bottom: 1rem;
+    }
+
+    .my-tours-page {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

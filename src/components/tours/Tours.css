@@ -1,0 +1,9 @@
+.tours-page {
+    padding: 2rem 4rem;
+}
+
+@media (max-width: 768px) {
+    .tours-page {
+        padding: 1rem;
+    }
+}

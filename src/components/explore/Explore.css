@@ -1,0 +1,151 @@
+.explore-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    height: 100vh;
+}
+
+.explore-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background-image: url("../../assets/images/explore-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.explore-search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto 0;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
+
+.explore-search {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.explore-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.explore-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.explore-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.explore-input-field {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+.explore-icon {
+    width: 28px;
+    height: 28px;
+    padding: 18px;
+    color: #75778B;
+    background-color: #F4F4F4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px;
+}
+
+.search-btn {
+    height: 100%;
+}
+
+.search-tags-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .explore-search {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-page {
+        padding: 1rem;
+    }
+
+    .explore-search-container {
+        padding-top: 4rem;
+    }
+
+    .explore-search {
+        margin-top: 150px;
+    }
+
+    .search-btn {
+        height: auto;
+    }
+
+    .search-tags {
+        width: 100%;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-search {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .explore-input-container {
+        max-width: 100%;
+    }
+
+    .explore-search button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,128 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: transparent;
+    position: sticky;
+    width: 100%;
+    z-index: 999;
+    flex-shrink: 0;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.navbar-list li {
+    list-style: none;
+    font-weight: 500;
+}
+
+.navbar-link {
+    all: unset;
+    cursor: pointer;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar-list {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+        list-style: none;
+        padding: 1rem;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-list {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+        list-style: none;
+        padding: 1rem;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-list {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+        list-style: none;
+        padding: 1rem;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}

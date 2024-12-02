@@ -1,0 +1,21 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: auto 0;
+    padding: 2rem 4rem;
+}
+
+@media (max-width: 768px) {
+    .error-page {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-page {
+        padding: 1rem;
+    }
+}

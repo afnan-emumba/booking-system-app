@@ -1,0 +1,35 @@
+.my-tour-card {
+    position: relative;
+}
+
+.my-tour-card-buttons {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.my-tour-card:hover .tour-description-short,
+.my-tour-card:hover .tour-card-icons {
+    display: none;
+}
+
+.my-tour-card:hover .my-tour-card-buttons {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .my-tours-page {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-tours-page {
+        padding: 1rem;
+    }
+}

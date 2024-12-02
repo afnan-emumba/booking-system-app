@@ -17,6 +17,7 @@ import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 import { removeTour } from "../../redux/slices/bookedToursSlice";
+import "./MyTourCard.css";
 
 interface MyTourCardProps {
   id: number;
