@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 import TourCard from "../tourCard/TourCard";
-import { tourDetails } from "../../utils/constants";
 import TourNotFound from "../tourNotFound/TourNotFound";
+import { tourDetails } from "../../utils/constants";
 import "./Tours.css";
 
 interface Tour {
@@ -29,41 +28,44 @@ interface Tour {
 }
 
 const Tours = () => {
-  const { city } = useParams();
   const location = useLocation();
   const [filteredTours, setFilteredTours] = useState<Tour[]>([]);
+  const city = location.state?.city;
 
   useEffect(() => {
     if (location.state?.filteredTours) {
       setFilteredTours(location.state.filteredTours);
     } else {
-      const tours = city
-        ? tourDetails.filter(
-            (tour) => tour.city.toLowerCase() === city.toLowerCase()
-          )
-        : tourDetails;
-      setFilteredTours(tours);
+      setFilteredTours(tourDetails);
     }
-  }, [city, location.state]);
+  }, [location.state]);
 
   return (
     <div className='tours-page'>
-      <h2>Top Destinations{city ? ` at "${city}"` : ""}</h2>
-
       {filteredTours.length > 0 ? (
-        <div className='tour-cards'>
-          {filteredTours.map((tour) => (
-            <Link key={tour.id} className='navbar-link' to={`/tour/${tour.id}`}>
-              <TourCard
-                image={tour.coverImage}
-                name={tour.name}
-                description={tour.description}
-                priceRange={tour.priceRange}
-                numOfDays={tour.numOfDays}
-              />
-            </Link>
-          ))}
-        </div>
+        <>
+          <h2>
+            Top Destinations
+            {filteredTours[0].city ? ` at "${filteredTours[0].city}"` : ""}
+          </h2>
+          <div className='tour-cards'>
+            {filteredTours.map((tour) => (
+              <Link
+                key={tour.id}
+                className='navbar-link'
+                to={`/tour/${tour.id}`}
+              >
+                <TourCard
+                  image={tour.coverImage}
+                  name={tour.name}
+                  description={tour.description}
+                  priceRange={tour.priceRange}
+                  numOfDays={tour.numOfDays}
+                />
+              </Link>
+            ))}
+          </div>
+        </>
       ) : (
         <TourNotFound city={city} />
       )}

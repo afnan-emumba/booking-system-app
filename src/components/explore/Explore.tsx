@@ -132,6 +132,8 @@ const Explore = () => {
   const open = Boolean(anchorEl);
   const id = open ? "calendar-popover" : undefined;
 
+  const isSearchDisabled = !location || !startDate || !endDate || !priceRange;
+
   return (
     <>
       <div className='explore-image'></div>
@@ -290,6 +292,7 @@ const Explore = () => {
               variant='contained'
               className='search-btn'
               onClick={handleSearch}
+              disabled={isSearchDisabled}
             >
               <SearchIcon fontSize='medium' style={{ color: "#fff" }} />
             </Button>
