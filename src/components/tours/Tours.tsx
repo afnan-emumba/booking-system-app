@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import TourCard from "../tourCard/TourCard";
@@ -30,16 +30,21 @@ interface Tour {
 
 const Tours = () => {
   const { city } = useParams();
+  const location = useLocation();
   const [filteredTours, setFilteredTours] = useState<Tour[]>([]);
 
   useEffect(() => {
-    const tours = city
-      ? tourDetails.filter(
-          (tour) => tour.city.toLowerCase() === city.toLowerCase()
-        )
-      : tourDetails;
-    setFilteredTours(tours);
-  }, [city]);
+    if (location.state?.filteredTours) {
+      setFilteredTours(location.state.filteredTours);
+    } else {
+      const tours = city
+        ? tourDetails.filter(
+            (tour) => tour.city.toLowerCase() === city.toLowerCase()
+          )
+        : tourDetails;
+      setFilteredTours(tours);
+    }
+  }, [city, location.state]);
 
   return (
     <div className='tours-page'>

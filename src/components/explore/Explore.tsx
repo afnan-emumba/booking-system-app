@@ -1,6 +1,11 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import dayjs from "dayjs";
 import { Dayjs } from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
+dayjs.extend(isSameOrAfter);
+dayjs.extend(isSameOrBefore);
 
 import {
   Paper,
@@ -25,8 +30,11 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Popover from "@mui/material/Popover";
 
 import SearchChip from "../searchChip/SearchChip";
-import { priceRanges } from "../../utils/constants";
-import { searchLocations } from "../../utils/constants";
+import {
+  priceRanges,
+  searchLocations,
+  tourDetails,
+} from "../../utils/constants";
 import "./Explore.css";
 
 const formControlStyles = {
@@ -77,9 +85,36 @@ const Explore = () => {
   };
 
   const handleSearch = () => {
+    let filteredTours = tourDetails;
+
     if (location) {
-      navigate(`/tours/${location}`);
+      filteredTours = filteredTours.filter(
+        (tour) => tour.city.toLowerCase() === location.toLowerCase()
+      );
     }
+
+    if (startDate && endDate) {
+      filteredTours = filteredTours.filter(
+        (tour) =>
+          dayjs(tour.startDate).isSameOrAfter(startDate, "day") &&
+          dayjs(tour.endDate).isSameOrBefore(endDate, "day")
+      );
+    }
+
+    if (priceRange) {
+      const [minPrice, maxPrice] = priceRange.split("-").map(Number);
+      filteredTours = filteredTours.filter((tour) => {
+        const [tourMinPrice, tourMaxPrice] = tour.priceRange
+          .split(" - ")
+          .map(Number);
+        return (
+          (minPrice <= tourMinPrice && maxPrice >= tourMinPrice) ||
+          (minPrice <= tourMaxPrice && maxPrice >= tourMaxPrice)
+        );
+      });
+    }
+
+    navigate("/tours", { state: { filteredTours } });
   };
 
   const handleCalendarOpen = (event: React.MouseEvent<HTMLElement>) => {
