@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import dayjs from "dayjs";
 
 import {
   Dialog,
@@ -26,6 +27,7 @@ interface MyTourCardProps {
   description: string;
   priceRange: string;
   numOfDays: number;
+  startDate: string;
 }
 
 const MyTourCard = ({
@@ -35,6 +37,7 @@ const MyTourCard = ({
   description,
   priceRange,
   numOfDays,
+  startDate,
 }: MyTourCardProps) => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
@@ -43,6 +46,8 @@ const MyTourCard = ({
     dispatch(removeTour(id));
     setOpen(false);
   };
+
+  const isWithinThreeDays = dayjs(startDate).diff(dayjs(), "day") <= 3;
 
   return (
     <Box
@@ -77,20 +82,27 @@ const MyTourCard = ({
         </div>
       </div>
       <div className='my-tour-card-buttons'>
+        <IconButton color='error' onClick={() => setOpen(true)}>
+          <DeleteIcon />
+        </IconButton>
         <Button variant='contained' fullWidth>
           <Link to={`/tour/${id}`} className='navbar-link'>
             Details
           </Link>
         </Button>
-        <IconButton color='error' onClick={() => setOpen(true)}>
-          <DeleteIcon />
-        </IconButton>
+        <Button variant='contained' fullWidth>
+          <Link to={`/update-tour/${id}`} className='navbar-link'>
+            Update
+          </Link>
+        </Button>
       </div>
       <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>Confirm Deletion</DialogTitle>
+        <DialogTitle>Delete Tour</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Are you sure you want to delete this tour?
+            {isWithinThreeDays
+              ? "You can’t delete this tour because there are only 3 days remaining until the beginning of this tour. "
+              : "Are you sure you want to delete this tour?"}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -101,9 +113,11 @@ const MyTourCard = ({
           >
             Cancel
           </Button>
-          <Button onClick={handleDelete} color='error' variant='contained'>
-            Delete
-          </Button>
+          {!isWithinThreeDays && (
+            <Button onClick={handleDelete} color='error' variant='contained'>
+              Delete
+            </Button>
+          )}
         </DialogActions>
       </Dialog>
     </Box>

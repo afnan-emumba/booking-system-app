@@ -26,6 +26,7 @@ const MyTours = () => {
             description={tour.description}
             priceRange={tour.priceRange}
             numOfDays={tour.numOfDays}
+            startDate={tour.startDate}
           />
         ))}
       </div>

@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -13,19 +13,23 @@ import {
   Box,
 } from "@mui/material";
 
-import { tourDetails } from "../../utils/constants";
 import ErrorPage from "../errorPage/ErrorPage";
 import BookTourImage from "../../assets/images/book-tour.jpg";
 
-import { addTour } from "../../redux/slices/bookedToursSlice";
+import { updateTour } from "../../redux/slices/bookedToursSlice";
 import { bookingSchema } from "../../utils/validation";
-import "./BookTour.css";
+import "./UpdateTour.css";
+import { RootState } from "../../redux/store";
 
-const BookTour = () => {
+const UpdateTour = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const tour = tourDetails.find((tour) => tour.id === parseInt(id || "0"));
+  const bookedTours = useSelector(
+    (state: RootState) => state.bookedTours.tours
+  );
+  const tour = bookedTours.find((tour) => tour.id === parseInt(id || "0"));
 
   const {
     control,
@@ -34,42 +38,49 @@ const BookTour = () => {
   } = useForm({
     resolver: yupResolver(bookingSchema),
     mode: "onChange",
+    defaultValues: {
+      name: tour?.user.name || "",
+      email: tour?.user.email || "",
+      phone: tour?.user.phone || "",
+      adults: tour?.user.adults || 0,
+      children: tour?.user.children || 0,
+      paymentMethod:
+        tour?.user.paymentMethod === "Visa" ||
+        tour?.user.paymentMethod === "MasterCard"
+          ? tour.user.paymentMethod
+          : "Visa",
+    },
   });
-
-  const dispatch = useDispatch();
 
   if (!tour) {
     return <ErrorPage />;
   }
 
   const onSubmit = (data: any) => {
-    if (tour) {
-      const bookingData = {
-        ...tour,
-        user: {
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          adults: data.adults,
-          children: data.children,
-          paymentMethod: data.paymentMethod,
-        },
-      };
-      dispatch(addTour(bookingData));
-      navigate("/my-tours");
-    }
-    console.log(data);
+    const updatedData = {
+      ...tour,
+      user: {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        adults: data.adults,
+        children: data.children,
+        paymentMethod: data.paymentMethod,
+      },
+    };
+    dispatch(updateTour(updatedData));
+    navigate("/my-tours");
   };
 
   return (
-    <div className='book-tour-page' style={{ display: "flex", gap: "4rem" }}>
+    <div className='update-tour-page' style={{ display: "flex", gap: "4rem" }}>
       <form
-        className='book-tour-form'
+        className='update-tour-form'
         style={{ flex: 1 }}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className='book-tour-header'>
-          <h2>Confirm Your Booking</h2>
+        <div className='update-tour-header'>
+          <h2>Update Your Booking</h2>
           <p>for {tour.name}</p>
         </div>
         <Box>
@@ -181,14 +192,14 @@ const BookTour = () => {
           color='primary'
           disabled={!isValid}
         >
-          Confirm
+          Update
         </Button>
       </form>
-      <div className='book-tour-img'>
-        <img src={BookTourImage} alt='Book Tour' />
+      <div className='update-tour-img'>
+        <img src={BookTourImage} alt='Update Tour' />
       </div>
     </div>
   );
 };
 
-export default BookTour;
+export default UpdateTour;

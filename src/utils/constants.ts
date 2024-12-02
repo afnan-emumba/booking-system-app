@@ -19,8 +19,8 @@ export const tourDetails = [
     priceRange: "50 - 200",
     coverImage: TourPic1,
     images: [TourPic1, TourPic1, TourPic1, TourPic1, TourPic1],
-    startDate: "2024-12-01",
-    endDate: "2024-12-04",
+    startDate: "2024-12-05",
+    endDate: "2024-12-08",
     numOfDays: dayjs("2024-12-04").diff(dayjs("2024-12-01"), "day") + 1,
     included: {
       deptLocation: "2000 Brush St, Detroit, MI 48226, United States",
