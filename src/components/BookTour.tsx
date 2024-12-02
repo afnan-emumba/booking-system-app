@@ -61,7 +61,7 @@ const BookTour = () => {
     formState: { errors, isValid },
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onSubmit",
+    mode: "onChange",
   });
 
   const dispatch = useDispatch();

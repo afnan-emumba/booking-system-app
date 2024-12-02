@@ -82,17 +82,17 @@ p {
 
 .underline {
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.underline::after {
-    content: '';
+.underline img {
     position: absolute;
+    bottom: -5px;
+    /* Adjust this value as needed */
     left: 0;
-    right: 0;
-    bottom: 6px;
-    border-bottom: 8px solid #da5c42;
-    transform: translateY(3px);
-    z-index: -1;
+    width: 100%;
+    height: auto;
 }
 
 .homepage {
@@ -114,6 +114,16 @@ p {
     z-index: 1;
     margin-top: -100px;
     margin-bottom: 12px;
+}
+
+.homepage-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.homepage-text p {
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .homepage-images {
@@ -163,7 +173,6 @@ p {
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    gap: 2rem;
     height: 100vh;
 }
 
@@ -505,7 +514,9 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 2rem;
+    padding: 0 2rem;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .book-tour-form {
@@ -521,9 +532,11 @@ p {
     justify-content: center;
     align-items: center;
     margin: -2rem -2rem -2rem 0;
+    height: 100%;
 }
 
 .book-tour-img img {
+    width: 100%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
@@ -555,6 +568,17 @@ p {
 
 .my-tour-card:hover .my-tour-card-buttons {
     display: flex;
+}
+
+.date-range-picker {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-range-picker .MuiFormControl-root {
+    width: 100%;
 }
 
 /* Responsive Styles */
