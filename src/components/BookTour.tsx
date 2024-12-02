@@ -82,7 +82,7 @@ const BookTour = () => {
   };
 
   return (
-    <div className='book-tour-page' style={{ display: "flex", gap: "2rem" }}>
+    <div className='book-tour-page' style={{ display: "flex", gap: "4rem" }}>
       <form
         className='book-tour-form'
         style={{ flex: 1 }}
