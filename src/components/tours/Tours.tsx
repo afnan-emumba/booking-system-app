@@ -44,10 +44,7 @@ const Tours = () => {
     <div className='tours-page'>
       {filteredTours.length > 0 ? (
         <>
-          <h2>
-            Top Destinations
-            {filteredTours[0].city ? ` at "${filteredTours[0].city}"` : ""}
-          </h2>
+          <h2>Top Destinations at "{filteredTours[0].city}"</h2>
           <div className='tour-cards'>
             {filteredTours.map((tour) => (
               <Link
