@@ -16,14 +16,14 @@ const Home = () => {
             Explore
             <img src={LineBelowText} alt='underline' />
           </span>{" "}
-          The New World
-          <br />
+          The New World <br className='line-break' />
           With Tourbay
         </h1>
         <p>
-          No matter where in the world you want to go, we
-          <br />
-          can help get you there and make your tour a<br />
+          No matter where in the world you want to go, we{" "}
+          <br className='line-break' />
+          can help get you there and make your tour a{" "}
+          <br className='line-break' />
           stupendous memory.
         </p>
         <div>

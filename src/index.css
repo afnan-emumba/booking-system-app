@@ -89,7 +89,6 @@ p {
 .underline img {
     position: absolute;
     bottom: -5px;
-    /* Adjust this value as needed */
     left: 0;
     width: 100%;
     height: auto;
@@ -811,9 +810,21 @@ p {
         margin-top: 0;
     }
 
+    .homepage-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .homepage-text p {
+        font-size: 1rem;
+    }
+
     .homepage-images {
         width: 100%;
         top: 0;
+    }
+
+    .line-break {
+        display: none;
     }
 
     .image-grid {
@@ -822,7 +833,6 @@ p {
 
     .explore-search {
         flex-direction: column;
-        /* Ensure input fields stack vertically */
         margin-top: 100px;
     }
 
@@ -857,6 +867,7 @@ p {
         padding: 1rem;
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     .book-tour-form {
