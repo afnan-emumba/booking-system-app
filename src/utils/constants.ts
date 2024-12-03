@@ -189,7 +189,7 @@ export const tourDetails = [
     description:
       "The Basílica de la Sagrada Família, also known as the Sagrada Família, is a large unfinished Roman Catholic minor basilica in Barcelona, Catalonia, Spain. Designed by the Catalan architect Antoni Gaudí, his work on the building is part of a UNESCO World Heritage Site.",
     city: "Barcelona",
-    priceRange: "500 - 750",
+    priceRange: "500 - 1000",
     numOfDays: dayjs("2024-12-21").diff(dayjs("2024-12-20"), "day") + 1,
     coverImage: TourPic4,
     images: [TourPic4, TourPic4, TourPic4, TourPic4, TourPic4],
