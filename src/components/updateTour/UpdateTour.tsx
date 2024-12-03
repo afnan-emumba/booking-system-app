@@ -73,10 +73,10 @@ const UpdateTour = () => {
   };
 
   return (
-    <div className='update-tour-page' style={{ display: "flex", gap: "4rem" }}>
+    <div className='update-tour-page' style={{ display: "flex", gap: "4rem", height: "100vh", overflow: "hidden" }}>
       <form
         className='update-tour-form'
-        style={{ flex: 1 }}
+        style={{ flex: 1, overflow: "auto" }}
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className='update-tour-header'>
@@ -195,8 +195,8 @@ const UpdateTour = () => {
           Update
         </Button>
       </form>
-      <div className='update-tour-img'>
-        <img src={BookTourImage} alt='Update Tour' />
+      <div className='update-tour-img' style={{ flex: 1, height: "100%" }}>
+        <img src={BookTourImage} alt='Update Tour' style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       </div>
     </div>
   );

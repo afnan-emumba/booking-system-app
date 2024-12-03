@@ -42,7 +42,7 @@ interface BookedToursState {
 }
 
 const initialState: BookedToursState = {
-  tours: JSON.parse(localStorage.getItem("bookedTours") || "[]"),
+  tours: [],
 };
 
 const bookedToursSlice = createSlice({

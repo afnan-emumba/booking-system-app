@@ -17,6 +17,7 @@
     padding: 2rem 4rem;
     height: auto;
     overflow: hidden;
+    height: 100vh;
 }
 
 .book-tour-form {
