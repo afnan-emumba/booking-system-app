@@ -1,45 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface User {
-  name: string;
-  email: string;
-  phone: string;
-  adults: number;
-  children: number;
-  paymentMethod: string;
-}
-
-interface Included {
-  deptLocation: string;
-  return: string;
-  features: string[];
-}
-
-interface Itinerary {
-  day: number;
-  weather: number;
-  schedule: string[];
-}
-
-interface Tour {
-  id: number;
-  name: string;
-  description: string;
-  city: string;
-  priceRange: string;
-  numOfDays: number;
-  coverImage: string;
-  images: string[];
-  startDate: string;
-  endDate: string;
-  included: Included;
-  itinerary: Itinerary[];
-  user: User;
-}
-
-interface BookedToursState {
-  tours: Tour[];
-}
+import { Tour, BookedToursState } from "../interfaces";
 
 const initialState: BookedToursState = {
   tours: [],
