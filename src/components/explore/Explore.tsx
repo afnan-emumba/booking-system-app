@@ -94,8 +94,11 @@ const Explore = () => {
     }
 
     if (startDate && endDate) {
-      const numOfDays = dayjs(endDate).diff(dayjs(startDate), "day") + 1;
-      filteredTours = filteredTours.filter((tour) => tour.numOfDays === numOfDays);
+      filteredTours = filteredTours.filter(
+        (tour) =>
+          dayjs(tour.startDate).isSameOrAfter(startDate, "day") &&
+          dayjs(tour.endDate).isSameOrBefore(endDate, "day")
+      );
     }
 
     if (priceRange) {
