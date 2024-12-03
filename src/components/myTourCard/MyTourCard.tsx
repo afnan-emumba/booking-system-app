@@ -97,7 +97,13 @@ const MyTourCard = ({
         </Button>
       </div>
       <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>Delete Tour</DialogTitle>
+        <DialogTitle
+          sx={{
+            color: "red",
+          }}
+        >
+          Delete Tour
+        </DialogTitle>
         <DialogContent>
           <DialogContentText>
             {isWithinThreeDays
@@ -109,7 +115,12 @@ const MyTourCard = ({
           <Button
             onClick={() => setOpen(false)}
             color='secondary'
-            variant='contained'
+            variant='outlined'
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(0, 0, 0, 0.05)",
+              },
+            }}
           >
             Cancel
           </Button>
